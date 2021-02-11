@@ -104,6 +104,9 @@ def generateFontFile(filename, outdir, config_file, font):
         + (filename + ".ttf" if not filename.endswith(".ttf") else filename)
     )
 
+    if outfile is None:
+        outfile = "abc"
+
     if os.path.exists(outfile):
         outfile = str(
             os.path.splitext(outfile)[0]
