@@ -1,7 +1,6 @@
 import sys
 import os.path
 import json
-import subprocess
 
 IMPORT_OPTIONS = ("removeoverlap", "correctdir")
 
@@ -13,6 +12,9 @@ class SVGtoTTF:
     def convert(self, directory, outfile, config):
         if directory[-1] not in "\/":
             directory = directory + "/"
+
+        import subprocess
+
         subprocess.run(
             [
                 "fontforge",

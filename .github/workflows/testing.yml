@@ -18,9 +18,9 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Install fontforge
         run: |
-          sudo apt install software-properties-common
-          sudo apt -y update
-          sudo apt install -y fontforge
+          wget -O fontforge https://github.com/fontforge/fontforge/releases/download/20201107/FontForge-2020-11-07-21ad4a1-x86_64.AppImage
+          chmod +x fontforge
+          sudo mv fontforge /usr/bin/
       - name: Install Potrace
         run: |
           sudo apt install -y potrace
