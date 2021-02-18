@@ -15,7 +15,12 @@ ALL_CHARS = list(
 )
 
 
+
+
 class SheetToPNG:
+
+
+
     """Converter class to convert input sample sheet to character PNGs."""
 
     def convert(self, sheet, characters_dir, config, cols=8, rows=10):
@@ -44,8 +49,10 @@ class SheetToPNG:
         )
         self.save_images(
             characters,
-            characters_dir,
+            characters_dir
         )
+
+
 
     def detect_characters(self, sheet_image, threshold_value, cols=8, rows=10):
         """Detect contours on the input image and filter them to get only characters.
