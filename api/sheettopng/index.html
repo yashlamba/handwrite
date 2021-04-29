@@ -1,0 +1,915 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Official Site for Handwrite">
+      
+      
+      
+        <meta name="author" content="Team Handwrite">
+      
+      
+        <link rel="canonical" href="https://cod-ed.github.io/handwrite/api/sheettopng/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
+    
+    
+      
+        <title>SheettoPNG - Handwrite</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e35208c4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700%7CUbuntu+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Ubuntu";--md-code-font-family:"Ubuntu Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="white">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#handwrite.sheettopng.SheetToPNG" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Handwrite" class="md-header__button md-logo" aria-label="Handwrite" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 480H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zM238.1 177.9 102.4 313.6l-6.3 57.1c-.8 7.6 5.6 14.1 13.3 13.3l57.1-6.3L302.2 242c2.3-2.3 2.3-6.1 0-8.5L246.7 178c-2.5-2.4-6.3-2.4-8.6-.1zM345 165.1 314.9 135c-9.4-9.4-24.6-9.4-33.9 0l-23.1 23.1c-2.3 2.3-2.3 6.1 0 8.5l55.5 55.5c2.3 2.3 6.1 2.3 8.5 0L345 199c9.3-9.3 9.3-24.5 0-33.9z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Handwrite
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SheettoPNG
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/cod-ed/handwrite/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cod-ed/handwrite
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Handwrite" class="md-nav__button md-logo" aria-label="Handwrite" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 480H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zM238.1 177.9 102.4 313.6l-6.3 57.1c-.8 7.6 5.6 14.1 13.3 13.3l57.1-6.3L302.2 242c2.3-2.3 2.3-6.1 0-8.5L246.7 178c-2.5-2.4-6.3-2.4-8.6-.1zM345 165.1 314.9 135c-9.4-9.4-24.6-9.4-33.9 0l-23.1 23.1c-2.3 2.3-2.3 6.1 0 8.5l55.5 55.5c2.3 2.3 6.1 2.3 8.5 0L345 199c9.3-9.3 9.3-24.5 0-33.9z"/></svg>
+
+    </a>
+    Handwrite
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/cod-ed/handwrite/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cod-ed/handwrite
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/" class="md-nav__link">
+        Usage
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/" class="md-nav__link">
+        Contributing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../credits/" class="md-nav__link">
+        Credits
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      <label class="md-nav__link" for="__nav_6">
+        Documentation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Documentation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Documentation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" checked>
+      
+      <label class="md-nav__link" for="__nav_6_1">
+        Converters
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Converters" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          Converters
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          SheettoPNG
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        SheettoPNG
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#handwrite.sheettopng.SheetToPNG" class="md-nav__link">
+    handwrite.sheettopng.SheetToPNG
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handwrite.sheettopng.SheetToPNG.convert" class="md-nav__link">
+    convert()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handwrite.sheettopng.SheetToPNG.detect_characters" class="md-nav__link">
+    detect_characters()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handwrite.sheettopng.SheetToPNG.save_images" class="md-nav__link">
+    save_images()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pngtosvg/" class="md-nav__link">
+        PNGtoSVG
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../svgtottf/" class="md-nav__link">
+        SVGtoTTF
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#handwrite.sheettopng.SheetToPNG" class="md-nav__link">
+    handwrite.sheettopng.SheetToPNG
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handwrite.sheettopng.SheetToPNG.convert" class="md-nav__link">
+    convert()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handwrite.sheettopng.SheetToPNG.detect_characters" class="md-nav__link">
+    detect_characters()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handwrite.sheettopng.SheetToPNG.save_images" class="md-nav__link">
+    save_images()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/cod-ed/handwrite/edit/master/docs/api/sheettopng.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>SheettoPNG</h1>
+                
+                <div class="doc doc-object doc-class">
+
+<a id="handwrite.sheettopng.SheetToPNG"></a>
+    <div class="doc doc-contents first">
+
+      <p>Converter class to convert input sample sheet to character PNGs.</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="handwrite.sheettopng.SheetToPNG.convert" class="doc doc-heading">
+<code class="codehilite language-python"><span class="n">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sheet</span><span class="p">,</span> <span class="n">characters_dir</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">rows</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span></code>
+
+
+<a href="#handwrite.sheettopng.SheetToPNG.convert" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Convert a sheet of sample writing input to a custom directory structure of PNGs.</p>
+<p>Detect all characters in the sheet as a separate contours and convert each to
+a PNG image in a temp/user provided directory.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>sheet</code></td>
+        <td><code>str</code></td>
+        <td><p>Path to the sheet file to be converted.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>characters_dir</code></td>
+        <td><code>str</code></td>
+        <td><p>Path to directory to save characters in.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>config</code></td>
+        <td><code>str</code></td>
+        <td><p>Path to config file.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>cols</code></td>
+        <td><code>int, default=8</code></td>
+        <td><p>Number of columns of expected contours. Defaults to 8 based on the default sample.</p></td>
+        <td><code>8</code></td>
+      </tr>
+      <tr>
+        <td><code>rows</code></td>
+        <td><code>int, default=10</code></td>
+        <td><p>Number of rows of expected contours. Defaults to 10 based on the default sample.</p></td>
+        <td><code>10</code></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>handwrite/sheettopng.py</code></summary>
+          <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sheet</span><span class="p">,</span> <span class="n">characters_dir</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">rows</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Convert a sheet of sample writing input to a custom directory structure of PNGs.</span>
+
+<span class="sd">    Detect all characters in the sheet as a separate contours and convert each to</span>
+<span class="sd">    a PNG image in a temp/user provided directory.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    sheet : str</span>
+<span class="sd">        Path to the sheet file to be converted.</span>
+<span class="sd">    characters_dir : str</span>
+<span class="sd">        Path to directory to save characters in.</span>
+<span class="sd">    config: str</span>
+<span class="sd">        Path to config file.</span>
+<span class="sd">    cols : int, default=8</span>
+<span class="sd">        Number of columns of expected contours. Defaults to 8 based on the default sample.</span>
+<span class="sd">    rows : int, default=10</span>
+<span class="sd">        Number of rows of expected contours. Defaults to 10 based on the default sample.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">config</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">threshold_value</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;threshold_value&quot;</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+    <span class="n">characters</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">detect_characters</span><span class="p">(</span>
+        <span class="n">sheet</span><span class="p">,</span> <span class="n">threshold_value</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="n">cols</span><span class="p">,</span> <span class="n">rows</span><span class="o">=</span><span class="n">rows</span>
+    <span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">save_images</span><span class="p">(</span>
+        <span class="n">characters</span><span class="p">,</span>
+        <span class="n">characters_dir</span><span class="p">,</span>
+    <span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="handwrite.sheettopng.SheetToPNG.detect_characters" class="doc doc-heading">
+<code class="codehilite language-python"><span class="n">detect_characters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sheet_image</span><span class="p">,</span> <span class="n">threshold_value</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">rows</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span></code>
+
+
+<a href="#handwrite.sheettopng.SheetToPNG.detect_characters" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Detect contours on the input image and filter them to get only characters.</p>
+<p>Uses opencv to threshold the image for better contour detection. After finding all
+contours, they are filtered based on area, cropped and then sorted sequentially based
+on coordinates. Finally returs the cols*rows top candidates for being the character
+containing contours.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>sheet_image</code></td>
+        <td><code>str</code></td>
+        <td><p>Path to the sheet file to be converted.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>threshold_value</code></td>
+        <td><code>int</code></td>
+        <td><p>Value to adjust thresholding of the image for better contour detection.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>cols</code></td>
+        <td><code>int, default=8</code></td>
+        <td><p>Number of columns of expected contours. Defaults to 8 based on the default sample.</p></td>
+        <td><code>8</code></td>
+      </tr>
+      <tr>
+        <td><code>rows</code></td>
+        <td><code>int, default=10</code></td>
+        <td><p>Number of rows of expected contours. Defaults to 10 based on the default sample.</p></td>
+        <td><code>10</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>list of list</code></td>
+      <td><p>Final rows*cols contours in form of list of list arranged as:
+sorted_characters[x][y] denotes contour at x, y position in the input grid.</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>handwrite/sheettopng.py</code></summary>
+          <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">detect_characters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sheet_image</span><span class="p">,</span> <span class="n">threshold_value</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">rows</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Detect contours on the input image and filter them to get only characters.</span>
+
+<span class="sd">    Uses opencv to threshold the image for better contour detection. After finding all</span>
+<span class="sd">    contours, they are filtered based on area, cropped and then sorted sequentially based</span>
+<span class="sd">    on coordinates. Finally returs the cols*rows top candidates for being the character</span>
+<span class="sd">    containing contours.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    sheet_image : str</span>
+<span class="sd">        Path to the sheet file to be converted.</span>
+<span class="sd">    threshold_value : int</span>
+<span class="sd">        Value to adjust thresholding of the image for better contour detection.</span>
+<span class="sd">    cols : int, default=8</span>
+<span class="sd">        Number of columns of expected contours. Defaults to 8 based on the default sample.</span>
+<span class="sd">    rows : int, default=10</span>
+<span class="sd">        Number of rows of expected contours. Defaults to 10 based on the default sample.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    sorted_characters : list of list</span>
+<span class="sd">        Final rows*cols contours in form of list of list arranged as:</span>
+<span class="sd">        sorted_characters[x][y] denotes contour at x, y position in the input grid.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># TODO Raise errors and suggest where the problem might be</span>
+
+    <span class="c1"># Read the image and convert to grayscale</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">sheet_image</span><span class="p">)</span>
+    <span class="n">gray</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2GRAY</span><span class="p">)</span>
+
+    <span class="c1"># Threshold and filter the image for better contour detection</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">thresh</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">threshold</span><span class="p">(</span><span class="n">gray</span><span class="p">,</span> <span class="n">threshold_value</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">close_kernel</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">getStructuringElement</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">MORPH_RECT</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+    <span class="n">close</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">morphologyEx</span><span class="p">(</span><span class="n">thresh</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">MORPH_CLOSE</span><span class="p">,</span> <span class="n">close_kernel</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="c1"># Search for contours.</span>
+    <span class="n">contours</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">findContours</span><span class="p">(</span>
+        <span class="n">close</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">RETR_EXTERNAL</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">CHAIN_APPROX_SIMPLE</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Filter contours based on number of sides and then reverse sort by area.</span>
+    <span class="n">contours</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span>
+        <span class="nb">filter</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">cnt</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span>
+                <span class="n">cv2</span><span class="o">.</span><span class="n">approxPolyDP</span><span class="p">(</span><span class="n">cnt</span><span class="p">,</span> <span class="mf">0.01</span> <span class="o">*</span> <span class="n">cv2</span><span class="o">.</span><span class="n">arcLength</span><span class="p">(</span><span class="n">cnt</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="kc">True</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="o">==</span> <span class="mi">4</span><span class="p">,</span>
+            <span class="n">contours</span><span class="p">,</span>
+        <span class="p">),</span>
+        <span class="n">key</span><span class="o">=</span><span class="n">cv2</span><span class="o">.</span><span class="n">contourArea</span><span class="p">,</span>
+        <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Calculate the bounding of the first contour and approximate the height</span>
+    <span class="c1"># and width for final cropping.</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">boundingRect</span><span class="p">(</span><span class="n">contours</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">space_h</span><span class="p">,</span> <span class="n">space_w</span> <span class="o">=</span> <span class="mi">7</span> <span class="o">*</span> <span class="n">h</span> <span class="o">//</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">7</span> <span class="o">*</span> <span class="n">w</span> <span class="o">//</span> <span class="mi">16</span>
+
+    <span class="c1"># Since amongst all the contours, the expected case is that the 4 sided contours</span>
+    <span class="c1"># containing the characters should have the maximum area, so we loop through the first</span>
+    <span class="c1"># rows*colums contours and add them to final list after cropping.</span>
+    <span class="n">characters</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rows</span> <span class="o">*</span> <span class="n">cols</span><span class="p">):</span>
+        <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">boundingRect</span><span class="p">(</span><span class="n">contours</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">w</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">h</span> <span class="o">//</span> <span class="mi">2</span>
+
+        <span class="n">roi</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="n">cy</span> <span class="o">-</span> <span class="n">space_h</span> <span class="p">:</span> <span class="n">cy</span> <span class="o">+</span> <span class="n">space_h</span><span class="p">,</span> <span class="n">cx</span> <span class="o">-</span> <span class="n">space_w</span> <span class="p">:</span> <span class="n">cx</span> <span class="o">+</span> <span class="n">space_w</span><span class="p">]</span>
+        <span class="n">characters</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">roi</span><span class="p">,</span> <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">])</span>
+
+    <span class="c1"># Now we have the characters but since they are all mixed up we need to position them.</span>
+    <span class="c1"># Sort characters based on &#39;y&#39; coordinate and group them by number of rows at a time. Then</span>
+    <span class="c1"># sort each group based on the &#39;x&#39; coordinate.</span>
+    <span class="n">characters</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">sorted_characters</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rows</span><span class="p">):</span>
+        <span class="n">sorted_characters</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span>
+            <span class="nb">sorted</span><span class="p">(</span><span class="n">characters</span><span class="p">[</span><span class="n">cols</span> <span class="o">*</span> <span class="n">k</span> <span class="p">:</span> <span class="n">cols</span> <span class="o">*</span> <span class="p">(</span><span class="n">k</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)],</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">sorted_characters</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="handwrite.sheettopng.SheetToPNG.save_images" class="doc doc-heading">
+<code class="codehilite language-python"><span class="n">save_images</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">characters</span><span class="p">,</span> <span class="n">characters_dir</span><span class="p">)</span></code>
+
+
+<a href="#handwrite.sheettopng.SheetToPNG.save_images" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Create directory for each character and save as PNG.</p>
+<p>Creates directory and PNG file for each image as following:</p>
+<div class="codehilite"><pre><span></span><code>characters_dir/ord(character)/ord(character).png  (SINGLE SHEET INPUT)
+characters_dir/sheet_filename/ord(character)/ord(character).png  (MULTIPLE SHEETS INPUT)
+</code></pre></div>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>characters</code></td>
+        <td><code>list of list</code></td>
+        <td><p>Sorted list of character images each inner list representing a row of images.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>characters_dir</code></td>
+        <td><code>str</code></td>
+        <td><p>Path to directory to save characters in.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>handwrite/sheettopng.py</code></summary>
+          <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">save_images</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">characters</span><span class="p">,</span> <span class="n">characters_dir</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Create directory for each character and save as PNG.</span>
+
+<span class="sd">    Creates directory and PNG file for each image as following:</span>
+
+<span class="sd">        characters_dir/ord(character)/ord(character).png  (SINGLE SHEET INPUT)</span>
+<span class="sd">        characters_dir/sheet_filename/ord(character)/ord(character).png  (MULTIPLE SHEETS INPUT)</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    characters : list of list</span>
+<span class="sd">        Sorted list of character images each inner list representing a row of images.</span>
+<span class="sd">    characters_dir : str</span>
+<span class="sd">        Path to directory to save characters in.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">characters_dir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># Create directory for each character and save the png for the characters</span>
+    <span class="c1"># Structure (single sheet): UserProvidedDir/ord(character)/ord(character).png</span>
+    <span class="c1"># Structure (multiple sheets): UserProvidedDir/sheet_filename/ord(character)/ord(character).png</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">images</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">characters</span><span class="p">):</span>
+        <span class="n">character</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">characters_dir</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">ALL_CHARS</span><span class="p">[</span><span class="n">k</span><span class="p">]))</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">character</span><span class="p">):</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">character</span><span class="p">)</span>
+        <span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">character</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">ALL_CHARS</span><span class="p">[</span><span class="n">k</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot;.png&quot;</span><span class="p">),</span>
+            <span class="n">images</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../../credits/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Credits
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../pngtosvg/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              PNGtoSVG
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      
+    
+  </body>
+</html>
