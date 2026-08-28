@@ -22,10 +22,7 @@ jobs:
           run: uv run --frozen black --check .
 
   test:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [windows-latest, ubuntu-latest]
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout full upstream repo
@@ -36,22 +33,14 @@ jobs:
           version: "0.12.0"
           python-version: "3.14"
           enable-cache: true
-      - name: Install fontforge (Linux)
-        if: matrix.os == 'ubuntu-latest'
+      - name: Install E2E dependencies (Linux)
         run: |
-          wget -O fontforge https://github.com/fontforge/fontforge/releases/download/20201107/FontForge-2020-11-07-21ad4a1-x86_64.AppImage
-          chmod +x fontforge
-          sudo mv fontforge /usr/bin/
-      - name: Install fontforge (Windows)
-        if: matrix.os == 'windows-latest'
+          sudo apt-get update
+          sudo apt-get install --yes fontforge potrace
+      - name: Verify E2E dependencies (Linux)
         run: |
-          Invoke-WebRequest -Uri https://github.com/fontforge/fontforge/releases/download/20201107/FontForge-2020-11-07-Windows.exe -OutFile fontforge.exe
-          .\fontforge.exe /SP- /VERYSILENT /SUPPRESSMSGBOXES /NOCANCEL | Out-Null
-          echo "C:\Program Files (x86)\FontForgeBuilds\bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
-      - name: Install Potrace
-        if: matrix.os == 'ubuntu-latest'
-        run: |
-          sudo apt install -y potrace
+          fontforge -lang=py -c 'import fontforge; print(fontforge.version())'
+          potrace --version
       - name: Install Handwrite
         run: uv sync --frozen --no-dev
       - name: Test
