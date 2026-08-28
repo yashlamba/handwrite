@@ -20,20 +20,20 @@ jobs:
           python-version: "3.14"
           enable-cache: true
       - name: Install dependencies
-        run: uv sync --frozen --group docs
+        run: uv sync --project devbranch --frozen --group docs
       - name: Git setup and update
         run: |
           git config user.name "GitHub Action" && git config user.email "github-action@github.com"
           git fetch origin
       - name: Build Docs for main
-        run: uv run --frozen mkdocs build
+        run: uv run --project devbranch --frozen mkdocs build
       - name: Build Docs for dev
         run: |
           cd devbranch
-          uv run --project .. --frozen mkdocs build
+          uv run --project . --frozen mkdocs build
           mv site dev
           cd ..
           mv devbranch/dev site/
       - name: Add latest web build and deploy
         run: |
-          uv run --frozen mkdocs gh-deploy --dirty
+          uv run --project devbranch --frozen mkdocs gh-deploy --dirty
