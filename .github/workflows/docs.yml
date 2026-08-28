@@ -1,18 +1,24 @@
 name: Docs Deploy
-on: push
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: docs-deploy
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout main
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: main
-      - name: Checkout dev
-        uses: actions/checkout@v4
-        with:
-          ref: dev
-          path: devbranch
+          fetch-depth: 0
       - name: Set up uv
         uses: astral-sh/setup-uv@v6
         with:
@@ -20,20 +26,12 @@ jobs:
           python-version: "3.14"
           enable-cache: true
       - name: Install dependencies
-        run: uv sync --project devbranch --frozen --group docs
-      - name: Git setup and update
+        run: uv sync --frozen --group docs
+      - name: Build documentation
+        run: uv run --frozen mkdocs build --strict
+      - name: Configure Git
         run: |
-          git config user.name "GitHub Action" && git config user.email "github-action@github.com"
-          git fetch origin
-      - name: Build Docs for main
-        run: uv run --project devbranch --frozen mkdocs build
-      - name: Build Docs for dev
-        run: |
-          cd devbranch
-          uv run --project . --frozen mkdocs build
-          mv site dev
-          cd ..
-          mv devbranch/dev site/
-      - name: Add latest web build and deploy
-        run: |
-          uv run --project devbranch --frozen mkdocs gh-deploy --dirty
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Deploy documentation
+        run: uv run --frozen mkdocs gh-deploy --force

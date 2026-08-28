@@ -12,6 +12,7 @@ nav:
     - Installation: "installation.md"
     - Usage: "usage.md"
     - Contributing: "contributing.md"
+    - Releasing: "releasing.md"
     - Credits: "credits.md"
     - Documentation:
           - Converters:
