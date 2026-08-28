@@ -12,13 +12,13 @@
         <meta name="author" content="Team Handwrite">
       
       
-        <link rel="canonical" href="https://yashlamba.github.io/handwrite/credits/">
+        <link rel="canonical" href="https://yashlamba.github.io/handwrite/releasing/">
       
       
         <link rel="prev" href="../contributing/">
       
       
-        <link rel="next" href="../api/sheettopng/">
+        <link rel="next" href="../credits/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Credits - Handwrite</title>
+        <title>Releasing - Handwrite</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#credits-and-references" class="md-skip">
+        <a href="#releasing-handwrite" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Credits
+              Releasing
             
           </span>
         </div>
@@ -310,15 +310,17 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
   
   
   <span class="md-ellipsis">
     
   
-    Credits
+    Releasing
   
 
     
@@ -326,10 +328,20 @@
   
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+      </a>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../credits/" class="md-nav__link">
         
   
   
@@ -345,35 +357,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#credits-and-references" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Credits and References
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -398,10 +381,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
             
   
   
@@ -419,8 +402,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -447,10 +430,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
         
           
-          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
             
   
   
@@ -468,8 +451,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -595,25 +578,8 @@
   
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#credits-and-references" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Credits and References
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -633,23 +599,31 @@
   
 
 
-  <h1>Credits</h1>
-
-<h2 id="credits-and-references">Credits and References<a class="headerlink" href="#credits-and-references" title="Permanent link">&para;</a></h2>
+<h1 id="releasing-handwrite">Releasing Handwrite<a class="headerlink" href="#releasing-handwrite" title="Permanent link">&para;</a></h1>
+<p>Handwrite is released from <code>main</code>. The version tag must exactly match the version
+in <code>pyproject.toml</code>; tags use <code>0.4.0</code>, not <code>v0.4.0</code>.</p>
+<ol>
+<li>Update <code>project.version</code> in <code>pyproject.toml</code> and refresh the lockfile:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="go">uv lock</span>
+</code></pre></div>
 <ol>
 <li>
-<p><a href="http://potrace.sourceforge.net/">Potrace</a> algorithm and package has been immensely helpful.</p>
+<p>Merge the version change into <code>main</code> and wait for the test and documentation
+   workflows to pass.</p>
 </li>
 <li>
-<p><a href="https://fontforge.org/en-US/">Fontforge</a> for packaging and adjusting font parameters.</p>
-</li>
-<li>
-<p><a href="https://github.com/sachac">Sacha Chua's</a> <a href="https://github.com/sachac/sachac-hand/">project</a> proved to be a great reference for fontforge python.</p>
-</li>
-<li>
-<p>All credit for svgtottf converter goes to this <a href="https://github.com/pteromys/svgs2ttf">project</a> by <a href="https://github.com/pteromys">pteromys</a>. We made a quite a lot of modifications of our own, but the base script idea was derived from here.</p>
+<p>Create and push an annotated tag from the release commit:</p>
 </li>
 </ol>
+<div class="highlight"><pre><span></span><code><span class="go">git tag -a 0.4.0 -m "Release 0.4.0"</span>
+<span class="go">git push origin 0.4.0</span>
+</code></pre></div>
+<p>The tag starts the release workflow. It validates the tag, builds the wheel and
+source distribution, publishes both to PyPI, and creates a GitHub Release with
+the same artifacts and generated release notes.</p>
+<p>If the workflow fails before publication, fix the problem and rerun it. Never
+move or reuse a tag after its version has been published to PyPI.</p>
 
 
 
