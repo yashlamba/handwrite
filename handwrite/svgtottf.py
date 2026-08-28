@@ -141,10 +141,8 @@ class SVGtoTTF:
             kerning_table = table.get("table", False)
             if not kerning_table:
                 raise ValueError("Kerning offsets not found in the config file.")
-            flatten_list = (
-                lambda y: [x for a in y for x in flatten_list(a)]
-                if type(y) is list
-                else [y]
+            flatten_list = lambda y: (
+                [x for a in y for x in flatten_list(a)] if type(y) is list else [y]
             )
             offsets = [0 if x is None else x for x in flatten_list(kerning_table)]
             self.font.addKerningClass("kern", "kern-1", rows, cols, offsets)

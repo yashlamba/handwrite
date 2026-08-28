@@ -4,8 +4,8 @@
 
 2. Install [Potrace](http://potrace.sourceforge.net/)
 
-3. Install handwrite:
+3. Install [uv](https://docs.astral.sh/uv/getting-started/installation/), then install Handwrite as a command-line tool:
 
     ```console
-    pip install handwrite
+    uv tool install handwrite
     ```

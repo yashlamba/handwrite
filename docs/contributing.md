@@ -24,29 +24,24 @@
    git clone https://github.com/yashlamba/handwrite
    ```
 
-4. (Optional) Make a virtual environment and activate it
+4. Install [uv](https://docs.astral.sh/uv/getting-started/installation/).
+
+5. In the project directory, create the environment and install the project:
 
    ```console
-   python -m venv .venv
-   source .venv/bin/activate
-   ```
-
-5. In the project directory run:
-
-   ```console
-   pip install -e .[dev]
+   uv sync --all-groups
    ```
 
 6. Make sure the tests run:
 
    ```console
-   python setup.py test
+   uv run python -m unittest discover
    ```
 
 7. Install pre-commit hooks before contributing:
 
    ```console
-   pre-commit install
+   uv run pre-commit install
    ```
 
 You are ready to go!
@@ -63,45 +58,40 @@ You are ready to go!
    git clone https://github.com/yashlamba/handwrite
    ```
 
-4. (Optional) Make a virtual environment and activate it
+4. Install [uv](https://docs.astral.sh/uv/getting-started/installation/).
+
+5. In the project directory, create the environment and install the project:
 
    ```console
-   python -m venv .venv
-   .venv\Scripts\activate
-   ```
-
-5. In the project directory run:
-
-   ```console
-   pip install -e .[dev]
+   uv sync --all-groups
    ```
 
 6. Make sure the tests run:
 
    ```console
-   python setup.py test
+   uv run python -m unittest discover
    ```
 
 7. Install pre-commit hooks before contributing:
 
    ```console
-   pre-commit install
+   uv run pre-commit install
    ```
 
 You are ready to go!
 
 ## Setting Up Docs
 
-1. If you haven't done a developer install of handwrite, you will need to install mkdocs and its requirements:
+1. Install the documentation dependencies:
 
 ```bash
-pip install mkdocs pymdown-extensions mkdocs-material mkdocs-git-revision-date-localized-plugin
+uv sync --group docs
 ```
 
 2. Check the installations by executing this command:
 
 ```bash
-mkdocs --version
+uv run mkdocs --version
 ```
 
     !!! warning ""
@@ -110,7 +100,7 @@ mkdocs --version
 3. Use the below command to host the documentation on local server
 
 ```bash
-mkdocs serve --dev-addr 127.0.0.1:8000
+uv run mkdocs serve --dev-addr 127.0.0.1:8000
 ```
 
 {== MkDocs supports live reload so you don't have to run the server again and again. Just save the changes in the docs and you'll see the change immediately. ==}

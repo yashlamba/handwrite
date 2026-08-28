@@ -72,7 +72,7 @@ class SHEETtoPNG:
         -------
         sorted_characters : list of list
             Final rows*cols contours in form of list of list arranged as:
-            sorted_characters[x][y] denotes contour at x, y position in the input grid.
+            `sorted_characters[x][y]` denotes contour at x, y position in the input grid.
         """
         # TODO Raise errors and suggest where the problem might be
 

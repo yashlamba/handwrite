@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "handwrite"
+version = "0.3.1"
+description = "Convert text to custom handwriting"
+readme = "README.md"
+requires-python = ">=3.14"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Yash Lamba", email = "yashlamba2000@gmail.com" },
+    { name = "Saksham Arora", email = "sakshamarora1001@gmail.com" },
+    { name = "Aryan Gupta", email = "aryangupta973@gmail.com" },
+]
+classifiers = [
+    "Programming Language :: Python :: 3.14",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "opencv-python",
+    "Pillow",
+]
+
+[project.urls]
+Homepage = "https://github.com/yashlamba/handwrite"
+
+[project.scripts]
+handwrite = "handwrite.cli:main"
+
+[dependency-groups]
+dev = [
+    "black",
+    "pre-commit",
+]
+docs = [
+    "mkdocs",
+    "mkdocs-material",
+    "mkdocstrings[python]",
+    "pymdown-extensions",
+]
+
+[tool.setuptools.package-data]
+handwrite = ["default.json"]
+
+[tool.setuptools]
+packages = ["handwrite"]
+
+[tool.uv]
+default-groups = ["dev"]
+
+[tool.black]
+target-version = ["py314"]

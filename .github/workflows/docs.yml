@@ -5,36 +5,35 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           ref: main
       - name: Checkout dev
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           ref: dev
           path: devbranch
-      - name: Setup Python
-        uses: actions/setup-python@v2
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
         with:
-          python-version: '3.8'
+          version: "0.12.0"
+          python-version: "3.14"
+          enable-cache: true
       - name: Install dependencies
-        run: |
-          python3 -m pip install --upgrade pip
-          python3 -m pip install -e .[dev]
-          python3 -m pip install Jinja2==3.0.0
+        run: uv sync --frozen --group docs
       - name: Git setup and update
         run: |
           git config user.name "GitHub Action" && git config user.email "github-action@github.com"
           git fetch origin
       - name: Build Docs for main
-        run: mkdocs build
+        run: uv run --frozen mkdocs build
       - name: Build Docs for dev
         run: |
           cd devbranch
-          mkdocs build
+          uv run --project .. --frozen mkdocs build
           mv site dev
           cd ..
           mv devbranch/dev site/
       - name: Add latest web build and deploy
         run: |
-          mkdocs gh-deploy --dirty
+          uv run --frozen mkdocs gh-deploy --dirty

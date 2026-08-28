@@ -9,28 +9,33 @@ jobs:
 
       steps:
         - name: Checkout full upstream repo
-          uses: actions/checkout@v2
-        - name: Set up Python 3.8
-          uses: actions/setup-python@v2
+          uses: actions/checkout@v4
+        - name: Set up uv
+          uses: astral-sh/setup-uv@v6
           with:
-            python-version: 3.8
+            version: "0.12.0"
+            python-version: "3.14"
+            enable-cache: true
+        - name: Install dependencies
+          run: uv sync --frozen
         - name: Check formatting with Black
-          uses: psf/black@stable
+          run: uv run --frozen black --check .
 
   test:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [windows-latest, ubuntu-latest]
-        python-version: [3.7, 3.8]
 
     steps:
       - name: Checkout full upstream repo
-        uses: actions/checkout@v2
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
+        uses: actions/checkout@v4
+      - name: Set up uv and Python 3.14
+        uses: astral-sh/setup-uv@v6
         with:
-          python-version: ${{ matrix.python-version }}
+          version: "0.12.0"
+          python-version: "3.14"
+          enable-cache: true
       - name: Install fontforge (Linux)
         if: matrix.os == 'ubuntu-latest'
         run: |
@@ -48,8 +53,6 @@ jobs:
         run: |
           sudo apt install -y potrace
       - name: Install Handwrite
-        run: |
-          pip install -e .
+        run: uv sync --frozen --no-dev
       - name: Test
-        run: |
-          python setup.py test
+        run: uv run --frozen --no-dev python -m unittest discover
