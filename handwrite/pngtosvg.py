@@ -70,7 +70,7 @@ class PNGtoSVG:
         threshold = 200
         data = []
         for pix in img.get_flattened_data():
-            if pix[0] >= threshold and pix[1] >= threshold and pix[3] >= threshold:
+            if pix[0] >= threshold and pix[1] >= threshold and pix[2] >= threshold:
                 data.append((255, 255, 255, 0))
             else:
                 data.append((0, 0, 0, 1))
